@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <script>
       // GitHub Pages SPA redirect
-      var path = window.location.pathname || '/'
+      var base = '/AikBrut-pages'
+      var path = window.location.pathname.replace(base, '') || '/'
       window.location.replace(
-        window.location.origin + '/?r=' + encodeURIComponent(path + window.location.search) + window.location.hash
+        window.location.origin + base + '/?r=' + encodeURIComponent(path + window.location.search) + window.location.hash
       )
     </script>
   </head>
